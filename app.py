@@ -53,8 +53,8 @@ RunApps.pack()
 #Mainloop
 root.mainloop()
 
-with open('appsave.txt', 'w') as f:
-    for apps in apps:
+with open('save.txt', 'w') as f:
+    for app in apps:
         f.write(app + ',')
 
 
