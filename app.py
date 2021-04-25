@@ -5,7 +5,7 @@ import os
 
 #Root
 root=tk.Tk()
-root.title=("App Runner")
+
 apps=[]
 
 #some if statements to fix the problems
