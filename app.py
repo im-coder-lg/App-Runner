@@ -17,15 +17,6 @@ if os.path.isfile('save.txt'):
 
 
 
-
-
-
-
-
-
-
-
-
 #AddApp command definition
 def addApp():
 
