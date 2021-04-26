@@ -1,3 +1,4 @@
+#imports
 import tkinter as tk
 from tkinter import filedialog, Text
 import os
@@ -6,10 +7,10 @@ import os
 #Root
 root=tk.Tk()
 
+#Apps mentioning
 apps=[]
 
 #some if statements to fix the problems
-
 if os.path.isfile('save.txt'):
     with open('save.txt', 'r') as f:
         tempApps=f.read()
@@ -52,7 +53,7 @@ openFile.pack()
 RunApps=tk.Button(root, text="Run Apps", padx=10, pady=5, fg="black", bg="#bbb2e9", command=runApps)
 RunApps.pack()
 
-#a for statement
+#A for statement for mentioning the apps in the label inside the frame
 for app in apps:
     label=tk.Label(frame, text=app)
     label.pack()
@@ -62,7 +63,7 @@ for app in apps:
 
 #Mainloop
 root.mainloop()
-
+#More functions
 with open('save.txt', 'w') as f:
     for app in apps:
         f.write(app + ',')
