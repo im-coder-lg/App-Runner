@@ -23,10 +23,7 @@ def addApp():
 
     for widget in frame.winfo_children():
         widget.destroy()
-
-
-
-
+        
     filename=filedialog.askopenfilename(initialdir="/", title="Choose ya file, mate!", filetypes=(("executables","*.exe"),("all.files", "*.*")))
     apps.append(filename)
     print(filename)
@@ -34,8 +31,7 @@ def addApp():
         label=tk.Label(frame, text=app, bg="gray")
         label.pack()
 
-
-
+#RunApps command definition
 def runApps():
     for app in apps:
         os.startfile(app)
@@ -43,7 +39,7 @@ def runApps():
 #Canvas
 canvas=tk.Canvas(root, height=500, width=500, bg="#bbb2e9")
 canvas.pack()
-
+#Frame
 frame=tk.Frame(root, bg="white")
 frame.place(relwidth=0.8, relheight=0.8, relx=0.1, rely=0.1)
 
